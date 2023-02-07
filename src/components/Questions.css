@@ -1,8 +1,26 @@
 .questions{
     padding: 0.8rem;
-    background-color: rgb(8, 100, 100);
+    background-color: rgb(41, 87, 87);
     margin: 2rem auto;
     width: 50rem;
     max-width: 95%;
     color: rgb(243, 249, 255);
+}
+
+.question-header{
+    display: flex;
+    margin-left: 3%;
+}
+
+.quiz-total{
+    text-align: left;
+}
+
+.quiz-timer{
+    margin-left: 60%; 
+}
+
+.quiz-submit{
+    margin-left: 80%;
+    font-size: 20px; 
 }

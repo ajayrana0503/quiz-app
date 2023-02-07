@@ -5,11 +5,18 @@
     box-shadow: 0 2px 8px rgba(155, 155, 155, 0.25);
     padding: 0.5rem;
     margin: 1rem 0;
-     /* border-radius: 12px;
-    background-color: #009970;  */
 }
 
 .answers{
    color: rgb(7, 7, 7);
    margin-left: 3%;
+}
+
+.quiz-remain{
+    margin-left: 87%; 
+    color: black;
+}
+
+.question-color{
+    color: black;
 }
