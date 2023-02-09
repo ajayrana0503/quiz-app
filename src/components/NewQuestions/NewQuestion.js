@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import QuestionForm from './QuestionForm';
+import './NewQuestion.css'
 
 const NewQuestion = (props) => {
     const [isEditing, setIsEditing] = useState(false);
     const saveQuestionDataHandler = (enteredQuestionData) => {
         const questionData = {
             ...enteredQuestionData,
-            id: Math.floor(Math.random()),
+            id: props.totalQuestion+1,
         };
         console.log(questionData) 
         props.onAddQuestion(questionData);

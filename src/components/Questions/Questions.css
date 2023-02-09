@@ -1,8 +1,8 @@
 .questions{
     padding: 0.8rem;
-    background-color: darkslategrey;
+    background-color: rgb(18, 23, 23);
     margin: 0.5rem auto;
-    width: 60rem;
+    width: 50rem;
     max-width: 95%;
     color: white;
 }

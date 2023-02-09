@@ -1,0 +1,44 @@
+
+  .question-filter__control {
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    display: block;
+    margin-left: 15px;
+    font-size: 20px;
+  }
+
+  .question-checkbox{
+    border-radius: 6px;
+    padding: 3px;
+    font-size: 17px;
+  }
+
+  .question-filter{
+    font-size: larger;
+    border: 3px;
+    border-radius: 10px;
+    padding: 2px;
+    width: 300px;
+    color:white;
+    font-weight: bolder;
+    display: flex;
+    justify-content:space-evenly;
+  }
+  
+  @media (min-width: 580px) {
+    .expense-item__description {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+    }
+  
+    .expense-item__description h2 {
+      font-size: 1.25rem;
+    }
+  
+    .expense-item__price {
+      font-size: 1.25rem;
+      padding: 0.5rem 1.5rem;
+    }
+  }

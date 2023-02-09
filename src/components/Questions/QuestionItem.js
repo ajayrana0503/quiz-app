@@ -9,12 +9,12 @@ const QuestionItem = (props) => {
     const option2 = props.question.option2;
     const option3 = props.question.option3;
     const option4 = props.question.option4;
-
+    
     return (
-        <div>
+        <div> 
             <Card className="question-item">
                 <div>
-                    <h2 className='question-color'>Q.{id} {question}</h2>
+                    <h2 className='question-color'>Q.{props.count} {question}</h2>
                     <div>
                         <p className="answers"> <input type="radio" name={id} value={option1} id="1"></input> {option1}</p>
                         <p className="answers"> <input type="radio" name={id} value={option2} id="2"></input> {option2}</p>
@@ -22,7 +22,7 @@ const QuestionItem = (props) => {
                         <p className="answers">  <input type="radio" name={id} value={option4} id="4"></input> {option4}</p>
                     </div>
                 </div>
-                <p className="quiz-remain">{id} of 10</p>
+                <p className="quiz-remain">{props.count} of 10</p>
             </Card>
 
             <hr />

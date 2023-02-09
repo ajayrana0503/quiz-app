@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import "./QuestionForm.css"
+import Card from '../UI/Card';
 
 const QuestionForm = (props) => {
     const [userInput, setUserInput] = useState({
-        enteredQuestion: "", enteredOption1: "", enteredOption2: "", enteredOption3: "", enteredOption4: "",correctOption: "",
+        enteredQuestion: "", enteredOption1: "", enteredOption2: "", enteredOption3: "", enteredOption4: "",correctOption: "",category:"React"
     })
     const questionChangeHandler = (event) => {
         setUserInput((prevState) => {
@@ -56,6 +57,14 @@ const QuestionForm = (props) => {
             }
         })
     }
+    const categoryChangeHandler = (event) => {
+        setUserInput((prevState) => {
+            return {
+                ...prevState,
+                category: event.target.value
+            }
+        })
+    }
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -66,13 +75,15 @@ const QuestionForm = (props) => {
             option3: userInput.enteredOption3,
             option4: userInput.enteredOption4,
             correctOption:userInput.correctOption,
+            category:userInput.category
         }
         props.onSaveQuestionData(newQuestion);
         setUserInput({
-            enteredQuestion: "", enteredOption1: "", enteredOption2: "", enteredOption3: "", enteredOption4: "",correctOption: "",
+            enteredQuestion: "", enteredOption1: "", enteredOption2: "", enteredOption3: "", enteredOption4: "",correctOption: "",category:""
         })
     }
     return (
+        <Card>
         <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
@@ -82,7 +93,7 @@ const QuestionForm = (props) => {
                 <br></br>
                 <div className="new-expense__control_category">
                        <label >Category </label>
-                        <select>
+                        <select className='quiz-checkbox' onChange={categoryChangeHandler} value={userInput.category}>
                             <option value="React">React</option>
                             <option value="Angular">Angular</option>
                             <option value="CSS">CSS</option>
@@ -108,9 +119,9 @@ const QuestionForm = (props) => {
                     </div>
                 </div>
                 <br></br>
-                <div className="new-expense__control">
-                        <label>Correct Option</label>
-                        <select onChange={correctOptionChangeHandler}>
+                <div className="new-expense__control_category">
+                        <label>Correct Option </label>
+                        <select onChange={correctOptionChangeHandler} className='quiz-checkbox'>
                             <option value={userInput.enteredOption1}>A</option>
                             <option value={userInput.enteredOption2}>B</option>
                             <option value={userInput.enteredOption3}>C</option>
@@ -123,6 +134,7 @@ const QuestionForm = (props) => {
                 </div>
             </div>
         </form>
+        </Card>
     )
 }
 
