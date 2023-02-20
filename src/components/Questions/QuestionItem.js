@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../UI/Card';
-import "./QuestionItem.css"
+import classes from './QuestionItem.module.css';
 
 const QuestionItem = (props) => {
     const id = props.question.id;
@@ -12,17 +12,17 @@ const QuestionItem = (props) => {
     
     return (
         <div> 
-            <Card className="question-item">
+            <Card className={`${classes.question_item}`}>
                 <div>
-                    <h2 className='question-color'>Q.{props.count} {question}</h2>
+                    <h2 className={`${classes.question_color}`}>Q.{props.count} {question}</h2>
                     <div>
-                        <p className="answers"> <input type="radio" name={id} value={option1} id="1"></input> {option1}</p>
-                        <p className="answers"> <input type="radio" name={id} value={option2} id="2"></input> {option2}</p>
-                        <p className="answers">  <input type="radio" name={id} value={option3} id="3"></input> {option3}</p>
-                        <p className="answers">  <input type="radio" name={id} value={option4} id="4"></input> {option4}</p>
+                        <p className={`${classes.answers}`}> <input type="radio" name={id} value={option1} id="1"></input> {option1}</p>
+                        <p className={`${classes.answers}`}> <input type="radio" name={id} value={option2} id="2"></input> {option2}</p>
+                        <p className={`${classes.answers}`}>  <input type="radio" name={id} value={option3} id="3"></input> {option3}</p>
+                        <p className={`${classes.answers}`}>  <input type="radio" name={id} value={option4} id="4"></input> {option4}</p>
                     </div>
                 </div>
-                <p className="quiz-remain">{props.count} of 10</p>
+                <p className={`${classes.quiz_remain}`}>{props.count} of 10</p>
             </Card>
 
             <hr />

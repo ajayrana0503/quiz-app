@@ -1,5 +1,5 @@
 import React from 'react';
-import './QuestionFilter.css';
+import classes from './QuestionFilter.module.css';
 
 const QuestionFilter = (props) => {
     const dropDownChangeHandler=(event)=>{
@@ -8,10 +8,10 @@ const QuestionFilter = (props) => {
   return(
      
      
-      <div className="question-filter">
-        <div className="question-filter__control"></div>
+      <div className={`${classes.question_filter}`}>
+        <div className={`${classes.question_filter_control}`}></div>
           <label>Filter By Category  </label>
-          <select className='question-checkbox' value={props.selected} onChange={dropDownChangeHandler}>
+          <select className={`${classes.question_checkbox}`} value={props.selected} onChange={dropDownChangeHandler}>
               <option value="React">React</option>
               <option value="Angular">Angular</option>
               <option value="HTML">HTML</option>
