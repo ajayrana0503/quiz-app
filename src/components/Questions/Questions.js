@@ -1,9 +1,9 @@
 import React from 'react'
 import Card from '../UI/Card'
 import QuestionItem from './QuestionItem';
-import "./Questions.css";
 import QuestionFilter from './QuestionFilter';
 import { useState } from 'react';
+import classes from './Questions.module.css';
 
 export const Questions = (props) => {
     const [filteredQuestion, setFilteredQuestion] = useState("React");
@@ -16,10 +16,10 @@ export const Questions = (props) => {
     });
 
     return (
-        <Card className='questions'>
-            <div className='question-header'>
-                <h3 className='quiz-total'>Total Question : 10</h3>
-                <h3 className='quiz-timer'>Time : 10:00</h3>
+        <Card className={`${classes.questions}`}>
+            <div className={`${classes.question_header}`}>
+                <h3 className={`${classes.quiz_total}`}>Total Question : 10</h3>
+                <h3 className={`${classes.quiz_timer}`}>Time : 10:00</h3>
             </div>
             <QuestionFilter selected={filteredQuestion} onChangeFilter={FilterChangeHandler} />
             {   
@@ -29,7 +29,7 @@ export const Questions = (props) => {
                 )
             }
 
-            <button className='quiz-submit'>Submit</button>
+            <button className={`${classes.quiz_submit}`}>Submit</button>
         </Card>
     )
 }

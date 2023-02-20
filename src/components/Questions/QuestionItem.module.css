@@ -1,4 +1,4 @@
-.question-item{
+.question_item{
     justify-content: space-between;
     align-items: left;
     text-align: left;
@@ -12,11 +12,11 @@
    margin-left: 3%;
 }
 
-.quiz-remain{
+.quiz_remain{
     margin-left: 87%; 
     color: black;
 }
 
-.question-color{
+.question_color{
     color: black;
 }

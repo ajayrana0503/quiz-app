@@ -1,5 +1,5 @@
 
-  .question-filter__control {
+  .question_filter__control {
     font-weight: bolder;
     margin-bottom: 0.5rem;
     display: block;
@@ -7,13 +7,13 @@
     font-size: 20px;
   }
 
-  .question-checkbox{
+  .question_checkbox{
     border-radius: 6px;
     padding: 3px;
     font-size: 17px;
   }
 
-  .question-filter{
+  .question_filter{
     font-size: larger;
     border: 3px;
     border-radius: 10px;
@@ -26,18 +26,18 @@
   }
   
   @media (min-width: 580px) {
-    .expense-item__description {
+    .expense_item__description {
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
       flex: 1;
     }
   
-    .expense-item__description h2 {
+    .expense_item__description h2 {
       font-size: 1.25rem;
     }
   
-    .expense-item__price {
+    .expense_item__price {
       font-size: 1.25rem;
       padding: 0.5rem 1.5rem;
     }
