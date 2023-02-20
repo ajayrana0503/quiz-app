@@ -1,4 +1,4 @@
-import './App.css';
+import classes from './App.module.css';
 import { Questions } from './components/Questions/Questions';
 import NewQuestion from './components/NewQuestions/NewQuestion';
 import { useState } from 'react';
@@ -29,7 +29,7 @@ function App() {
    };
 
   return (
-    <div className="App">
+    <div className={`${classes.App}`}>
       <h1>QUIZ</h1>
       <NewQuestion onAddQuestion={addQuestionHandler} totalQuestion={initialquestions.length}/>
       <Questions questions={question} />

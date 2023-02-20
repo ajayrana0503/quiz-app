@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef, useState } from 'react';
-import classes from"./QuestionForm.module.css"
+import classes from "./QuestionForm.module.css"
 import Card from '../UI/Card';
 import ErrorModal from '../UI/ErrorModal';
 
@@ -122,7 +122,7 @@ const QuestionForm = (props) => {
     }
 
     return (
-        <div>
+        <div className={`${classes.new_expense}`}>
             {error && <ErrorModal onConfirm={errorHandler} title={error.title} message={error.message} />}
             <Card >
                 <form onSubmit={submitHandler}>
@@ -172,7 +172,7 @@ const QuestionForm = (props) => {
                             </div>
                         </div>
                         <br></br>
-                        <div className="new-expense__control_category">
+                        <div className={`${classes.new_expense__control_category}`}>
                             <label>Correct Option </label>
                             <select //</div>onChange={correctOptionChangeHandler} className='quiz-checkbox'
                             ref={correctOptionInputRef}>
