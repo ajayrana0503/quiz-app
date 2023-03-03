@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-weight: 900;
+  font-size: -webkit-xxx-large;
+  font-family: cursive;
 }
 
 .App-logo {
